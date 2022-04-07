@@ -3,9 +3,10 @@ using Autodesk.AutoCAD.DatabaseServices;
 using Autodesk.AutoCAD.EditorInput;
 using Autodesk.AutoCAD.Geometry;
 using Autodesk.AutoCAD.Runtime;
-using Dreambuild.AutoCAD.Internal;
 using System;
+using Dreambuild.AutoCAD.Internal;
 using System.Collections.Generic;
+using Dreambuild.AutoCAD.Internal;
 using System.Linq;
 
 namespace Dreambuild.AutoCAD
@@ -16,6 +17,20 @@ namespace Dreambuild.AutoCAD
     public class CodePackTest
     {
         #region Commands that you can provide out of the box in your application
+
+        [CommandMethod("Test")]
+        public void Test()
+        {
+            var editor = Application.DocumentManager.MdiActiveDocument.Editor;
+            editor.WriteMessage("Hi CF!");
+        }
+        
+        [CommandMethod("ShowLoginPage")]
+        public void ShowLoginPage()
+        {
+            var loginPage = new DLZ.LoginPage();
+            Application.ShowModalWindow(loginPage);
+        }
 
         /// <summary>
         /// View or edit custom dictionaries of DWG.

@@ -70,6 +70,9 @@
     <Compile Include="App.cs" />
     <Compile Include="Commands.cs" />
     <Compile Include="FlexDataStore.cs" />
+    <Compile Include="GUIs\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Internal\CustomDictionary.cs" />
     <Compile Include="DbHelper.cs" />
     <Compile Include="GUIs\DictionaryViewer.xaml.cs">
@@ -104,6 +107,10 @@
     <Page Include="GUIs\InputBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUIs\LoginPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="GUIs\MultiInputs.xaml">
       <SubType>Designer</SubType>
